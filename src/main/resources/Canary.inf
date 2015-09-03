@@ -1,0 +1,6 @@
+main-class=com.goodformentertainment.canary.sky.SkylandsPlugin
+author=Rusli
+version=1.0.0
+name=Skylands
+
+dependencies=PlayerState,Zown
