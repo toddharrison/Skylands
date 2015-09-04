@@ -1,6 +1,12 @@
 package com.goodformentertainment.canary.sky;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
+
 import com.goodformentertainment.canary.zown.api.Point;
+
 import net.canarymod.api.entity.living.animal.EntityAnimal;
 import net.canarymod.api.entity.living.humanoid.Player;
 import net.canarymod.api.entity.living.monster.EntityMob;
@@ -12,15 +18,10 @@ import net.canarymod.api.world.blocks.BlockType;
 import net.canarymod.api.world.blocks.Chest;
 import net.visualillusionsent.utils.TaskManager;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
-
 public class SkylandsIslandManager {
     // TODO make configurable
     public static final int xOffset = 5000;
-    public static final int zOffset = 5000;
+    public static final int zOffset = -5000;
 
     private final SkylandsConfig config;
 
@@ -34,26 +35,26 @@ public class SkylandsIslandManager {
     public Point getIslandSpiralLocation(final int n) {
         final Point pos = new Point(0, 0, 0);
 
-        double r = Math.floor((Math.sqrt(n + 1) - 1) / 2) + 1;
-        double p = (8 * r * (r - 1)) / 2;
-        double en = r * 2;
-        double a = (1 + n - p) % (r * 8);
-        switch ((int)Math.floor(a / (r * 2))) {
+        final double r = Math.floor((Math.sqrt(n + 1) - 1) / 2) + 1;
+        final double p = 8 * r * (r - 1) / 2;
+        final double en = r * 2;
+        final double a = (1 + n - p) % (r * 8);
+        switch ((int) Math.floor(a / (r * 2))) {
             case 0:
                 pos.x = (int) (a - r);
-                pos.z = (int) (-r);
+                pos.z = (int) -r;
                 break;
             case 1:
-                pos.x = (int) (r);
-                pos.z = (int) ((a % en) - r);
+                pos.x = (int) r;
+                pos.z = (int) (a % en - r);
                 break;
             case 2:
-                pos.x = (int) (r - (a % en));
-                pos.z = (int) (r);
+                pos.x = (int) (r - a % en);
+                pos.z = (int) r;
                 break;
             case 3:
-                pos.x = (int) (-r);
-                pos.z = (int) (r - (a % en));
+                pos.x = (int) -r;
+                pos.z = (int) (r - a % en);
                 break;
         }
 
@@ -191,9 +192,9 @@ public class SkylandsIslandManager {
                 final Point islandRelativePoint = getIslandSpiralLocation(islandId - 2);
 
                 // Get island dimensions
-                final int minX = (islandRelativePoint.x * maxSize + xOffset) - (maxSize / 2);
+                final int minX = islandRelativePoint.x * maxSize + xOffset - maxSize / 2;
                 final int maxX = minX + maxSize;
-                final int minZ = (islandRelativePoint.z * maxSize + zOffset) - (maxSize / 2);
+                final int minZ = islandRelativePoint.z * maxSize + zOffset - maxSize / 2;
                 final int maxZ = minZ + maxSize;
 
                 // Remove all animals
