@@ -27,6 +27,7 @@ import net.canarymod.database.exceptions.DatabaseReadException;
 import net.canarymod.database.exceptions.DatabaseWriteException;
 import net.canarymod.hook.HookHandler;
 import net.canarymod.hook.player.ItemUseHook;
+import net.canarymod.hook.player.PlayerRespawnedHook;
 import net.canarymod.plugin.PluginListener;
 import net.canarymod.plugin.Priority;
 
@@ -81,8 +82,9 @@ public class SkylandsPlayerManager implements PluginListener {
 
             // Spiral algorithm for island placement (-1 starting index is at 0,0)
             // TODO combine into common method in IslandManager
+            // TODO updated to start count at 1 instead of 0 (change 1 to 2 below)
             final Point islandRelativePoint = islandManager
-                    .getIslandSpiralLocation(xPlayer.islandId - 2);
+                    .getIslandSpiralLocation(xPlayer.islandId - 1);
             final int x = islandRelativePoint.x * config.getMaxSize()
                     + SkylandsIslandManager.xOffset;
             final int y = config.getHeight();
@@ -99,10 +101,23 @@ public class SkylandsPlayerManager implements PluginListener {
                 final Point minPoint = new Point(x - zownRadius, -100, z - zownRadius);
                 final Point maxPoint = new Point(x + zownRadius, 255, z + zownRadius);
 
-                final String name = "Skylands_Player_" + player.getUUIDString();
+                // final String name = "Skylands_Player_" + player.getUUIDString();
+                String name = player.getName();
 
-                // Remove the player's zown if it exists somewhere else in the world
-                zownManager.removeZown(world, name);
+                Tree<? extends IZown> existingZown = zownManager.getZown(world, name);
+                if (existingZown != null) {
+                    if (existingZown.getData().isOwner(player)) {
+                        // Remove the player's zown if it exists somewhere else in the world
+                        zownManager.removeZown(world, name);
+                    } else {
+                        // Zown name conflict, choose a unique one
+                        int count = 1;
+                        while (existingZown != null) {
+                            name = player.getName() + count++;
+                            existingZown = zownManager.getZown(world, name);
+                        }
+                    }
+                }
 
                 playerZown = zownManager.createZown(world, name, null, minPoint, maxPoint);
                 final IConfiguration playerZownConfig = playerZown.getData().getConfiguration();
@@ -181,23 +196,36 @@ public class SkylandsPlayerManager implements PluginListener {
     }
 
     @HookHandler(priority = Priority.PASSIVE)
+    public void onSkylandRespawned(final PlayerRespawnedHook hook) {
+        final Location location = hook.getLocation();
+        if (location.getWorld() == worldManager.getWorld()) {
+            final Player player = hook.getPlayer();
+
+            // Enable player flight
+            player.getCapabilities().setMayFly(true);
+            player.getCapabilities().setFlying(true);
+            player.updateCapabilities();
+        }
+    }
+
+    @HookHandler(priority = Priority.PASSIVE)
     public void onWorldEnter(final WorldEnterHook hook)
             throws DatabaseReadException, DatabaseWriteException {
         if (hook.getWorld() == worldManager.getWorld()) {
             final Player player = hook.getPlayer();
-            // final SkylandsPlayer xPlayer = addPlayer(player);
+            final SkylandsPlayer xPlayer = addPlayer(player);
 
             // if (!xPlayer.practice) {
-            // final Location fromLocation = hook.getFromLocation();
-            // if (fromLocation != null) {
-            // xPlayer.setReturnLocation(fromLocation);
-            // persist(xPlayer);
-            // }
+            final Location fromLocation = hook.getFromLocation();
+            if (fromLocation != null) {
+                xPlayer.setReturnLocation(fromLocation);
+                persist(xPlayer);
+            }
             // }
 
-            // TODO enable player flight
+            // Enable player flight
             player.getCapabilities().setMayFly(true);
-            // player.getCapabilities().setFlying(true);
+            player.getCapabilities().setFlying(true);
             player.updateCapabilities();
 
             SkylandsPlugin.LOG.debug(player.getName() + " entered Skylands");
@@ -224,7 +252,7 @@ public class SkylandsPlayerManager implements PluginListener {
             }
             // }
 
-            // TODO disable player flight
+            // Disable player flight
             player.getCapabilities().setMayFly(false);
             player.getCapabilities().setFlying(false);
             player.updateCapabilities();
