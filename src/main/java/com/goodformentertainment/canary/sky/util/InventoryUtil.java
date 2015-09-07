@@ -1,4 +1,4 @@
-package com.goodformentertainment.canary.util;
+package com.goodformentertainment.canary.sky.util;
 
 import net.canarymod.api.inventory.Inventory;
 import net.canarymod.api.inventory.Item;

@@ -1,8 +1,5 @@
-package com.goodformentertainment.canary.util.menu;
+package com.goodformentertainment.canary.sky.util.menu;
 
-import com.goodformentertainment.canary.util.menu.hook.MenuCloseHook;
-import com.goodformentertainment.canary.util.menu.hook.MenuItemSelectHook;
-import com.goodformentertainment.canary.util.menu.hook.MenuOpenHook;
 import net.canarymod.Canary;
 import net.canarymod.api.entity.living.humanoid.Player;
 import net.canarymod.api.factory.ObjectFactory;
@@ -17,6 +14,10 @@ import net.canarymod.plugin.PluginListener;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.goodformentertainment.canary.sky.util.menu.hook.MenuCloseHook;
+import com.goodformentertainment.canary.sky.util.menu.hook.MenuItemSelectHook;
+import com.goodformentertainment.canary.sky.util.menu.hook.MenuOpenHook;
 
 public class Menu implements PluginListener {
     private static final ObjectFactory FACTORY = Canary.factory().getObjectFactory();

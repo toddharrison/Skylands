@@ -24,7 +24,7 @@ public class SkylandsPlugin extends Plugin {
     private SkylandsConfig config;
     private SkylandsWorldManager worldManager;
     private SkylandsIslandManager islandManager;
-    // private XChallengeManager challengeManager;
+    private SkylandsChallengeManager challengeManager;
     private SkylandsPlayerManager playerManager;
     private SkylandsCommand command;
     // private XScoreboard scoreboard;
@@ -45,12 +45,18 @@ public class SkylandsPlugin extends Plugin {
             LOG.warn("Failed to create the default configuration file.", e);
         }
 
-        // try {
-        // JarUtil.exportResource(this, "skylands_xchallenge.xml", new File("db"));
-        // JarUtil.exportResource(this, "skylands_xchallengelevel.xml", new File("db"));
-        // } catch (final IOException e) {
-        // LOG.warn("Failed to create the default challenge data files.", e);
-        // }
+        try {
+            // TODO
+            final File db = new File("db");
+            LOG.info("DB: " + db);
+            LOG.info("Present: " + db.exists());
+            LOG.info("Copied challenges: "
+                    + JarUtil.exportResource(this, "skylands_xchallenge.xml", db));
+            LOG.info("Copied challenge levels: "
+                    + JarUtil.exportResource(this, "skylands_xchallengelevel.xml", db));
+        } catch (final IOException e) {
+            LOG.warn("Failed to create the default challenge data files.", e);
+        }
 
         config = new SkylandsConfig(this);
         setLoggingLevel(config.getLoggingLevel());
@@ -64,16 +70,18 @@ public class SkylandsPlugin extends Plugin {
             worldManager = new SkylandsWorldManager(config, zownManager);
             // scoreboard = new XScoreboard(worldManager, new BlockScoreValue(config));
             islandManager = new SkylandsIslandManager(config);
-            // challengeManager = new XChallengeManager(this, scoreboard);
+            // challengeManager = new SkylandsChallengeManager(this, scoreboard);
+            challengeManager = new SkylandsChallengeManager(this);
             // playerManager = new SkylandsPlayerManager(config, worldManager, islandManager,
             // challengeManager,
             // zownManager);
             playerManager = new SkylandsPlayerManager(config, worldManager, islandManager,
-                    zownManager);
+                    challengeManager, zownManager);
             // command = new SkylandsCommand(worldManager, playerManager, challengeManager,
             // islandManager,
             // scoreboard, zownManager);
-            command = new SkylandsCommand(worldManager, playerManager, islandManager);
+            command = new SkylandsCommand(worldManager, playerManager, challengeManager,
+                    islandManager);
 
             // scoreboard.setPlayerManager(playerManager);
 
@@ -83,7 +91,7 @@ public class SkylandsPlugin extends Plugin {
 
             if (worldManager.load()) {
                 Canary.hooks().registerListener(playerManager, this);
-                // Canary.hooks().registerListener(challengeManager, this);
+                Canary.hooks().registerListener(challengeManager, this);
                 // Canary.hooks().registerListener(scoreboard, this);
 
                 try {
@@ -110,7 +118,7 @@ public class SkylandsPlugin extends Plugin {
 
         command = null;
         playerManager = null;
-        // challengeManager = null;
+        challengeManager = null;
         islandManager = null;
         // scoreboard = null;
         worldManager = null;

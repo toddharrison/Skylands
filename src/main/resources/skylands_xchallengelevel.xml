@@ -1,5 +1,4 @@
-<!--
-<xis_xchallengelevel>
+<skylands_xchallengelevel>
     <tableProperties>
         <id auto-increment="true" data-type="INTEGER" column-type="PRIMARY" is-list="false" not-null="false"/>
         <name auto-increment="false" data-type="STRING" column-type="UNIQUE" is-list="false" not-null="false"/>
@@ -35,5 +34,4 @@
         <name>Xtreme</name>
         <order>6</order>
     </entry>
-</xis_xchallengelevel>
--->
+</skylands_xchallengelevel>

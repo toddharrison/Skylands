@@ -1,6 +1,7 @@
-package com.goodformentertainment.canary.util.menu.hook;
+package com.goodformentertainment.canary.sky.util.menu.hook;
 
-import com.goodformentertainment.canary.util.menu.Menu;
+import com.goodformentertainment.canary.sky.util.menu.Menu;
+
 import net.canarymod.api.entity.living.humanoid.Player;
 import net.canarymod.hook.Hook;
 

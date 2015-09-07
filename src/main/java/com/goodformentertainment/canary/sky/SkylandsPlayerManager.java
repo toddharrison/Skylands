@@ -35,7 +35,7 @@ public class SkylandsPlayerManager implements PluginListener {
     private final SkylandsConfig config;
     private final SkylandsWorldManager worldManager;
     private final SkylandsIslandManager islandManager;
-    // private final XChallengeManager challengeManager;
+    // private final SkylandsChallengeManager challengeManager;
     private final Map<String, SkylandsPlayer> players;
     // private final Collection<String> deadPlayers;
 
@@ -47,12 +47,12 @@ public class SkylandsPlayerManager implements PluginListener {
     // final IZownManager zownManager) {
     public SkylandsPlayerManager(final SkylandsConfig config,
             final SkylandsWorldManager worldManager, final SkylandsIslandManager islandManager,
-            final IZownManager zownManager) {
+            final SkylandsChallengeManager challengeManager, final IZownManager zownManager) {
         this.config = config;
         this.worldManager = worldManager;
         this.islandManager = islandManager;
-        // challengeManager = challengeManager;
-        // challengeManager.setPlayerManager(this);
+        // this.challengeManager = challengeManager;
+        challengeManager.setPlayerManager(this);
         this.zownManager = zownManager;
         // deadPlayers = Collections.synchronizedCollection(new HashSet<String>());
         players = new HashMap<String, SkylandsPlayer>();
@@ -215,13 +215,11 @@ public class SkylandsPlayerManager implements PluginListener {
             final Player player = hook.getPlayer();
             final SkylandsPlayer xPlayer = addPlayer(player);
 
-            // if (!xPlayer.practice) {
             final Location fromLocation = hook.getFromLocation();
             if (fromLocation != null) {
                 xPlayer.setReturnLocation(fromLocation);
                 persist(xPlayer);
             }
-            // }
 
             // Enable player flight
             player.getCapabilities().setMayFly(true);

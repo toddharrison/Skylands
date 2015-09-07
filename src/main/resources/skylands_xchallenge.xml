@@ -1,5 +1,4 @@
-<!--
-<xis_xchallenge>
+<skylands_xchallenge>
     <tableProperties>
         <consume_items auto-increment="false" data-type="BOOLEAN" column-type="NORMAL" is-list="false"
                        not-null="false"/>
@@ -47,6 +46,7 @@
         <score_reward>40</score_reward>
         <type>onPlayer</type>
     </entry>
+    <!--
     <entry>
         <consume_items>false</consume_items>
         <description>3 blocks of still water on your island.</description>
@@ -1031,5 +1031,5 @@
         <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
-</xis_xchallenge>
--->
+    -->
+</skylands_xchallenge>

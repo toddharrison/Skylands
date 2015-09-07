@@ -16,7 +16,7 @@ import net.canarymod.database.exceptions.DatabaseWriteException;
 public class SkylandsCommand implements CommandListener {
     private final SkylandsWorldManager worldManager;
     private final SkylandsPlayerManager playerManager;
-    // private final XChallengeManager challengeManager;
+    private final SkylandsChallengeManager challengeManager;
     private final SkylandsIslandManager islandManager;
     // private final XScoreboard scoreboard;
     // private final IZownManager zownManager;
@@ -26,10 +26,12 @@ public class SkylandsCommand implements CommandListener {
     // /* final XChallengeManager challengeManager, */ final SkylandsIslandManager islandManager
     // /*, final XScoreboard scoreboard, final IZownManager zownManager*/) {
     public SkylandsCommand(final SkylandsWorldManager worldManager,
-            final SkylandsPlayerManager playerManager, final SkylandsIslandManager islandManager) {
+            final SkylandsPlayerManager playerManager,
+            final SkylandsChallengeManager challengeManager,
+            final SkylandsIslandManager islandManager) {
         this.worldManager = worldManager;
         this.playerManager = playerManager;
-        // this.challengeManager = challengeManager;
+        this.challengeManager = challengeManager;
         this.islandManager = islandManager;
         // this.scoreboard = scoreboard;
         // this.zownManager = zownManager;
@@ -44,12 +46,13 @@ public class SkylandsCommand implements CommandListener {
             // player.message(
             // "Usage: /sky <(g)o | (c)hallenge | (e)xit | (l)istplayers | (t)opscores | practice |
             // restart>");
-            player.message("Usage: /sky <(g)o | (e)xit | (l)istplayers | restart>");
+            player.message("Usage: /sky <(g)o | (c)hallenge | (e)xit | (l)istplayers | restart>");
         } else {
             // SkylandsPlugin.LOG.info(
             // "Usage: /sky <(g)o | (c)hallenge | (e)xit | (l)istplayers | (t)opscores | practice |
             // restart>");
-            SkylandsPlugin.LOG.info("Usage: /sky <(g)o | (e)xit | (l)istplayers | restart>");
+            SkylandsPlugin.LOG
+                    .info("Usage: /sky <(g)o | (c)hallenge | (e)xit | (l)istplayers | restart>");
         }
     }
 
@@ -72,19 +75,19 @@ public class SkylandsCommand implements CommandListener {
         }
     }
 
-    // @Command(aliases = { "challenge",
-    // "c" }, parent = "sky", description = "Compete a Skylands Challenge", permissions = {
-    // "sky.command.challenge" }, toolTip = "/sky (c)hallenge")
-    // public void challenge(final MessageReceiver caller, final String[] parameters) {
-    // if (caller instanceof Player) {
-    // final Player player = caller.asPlayer();
-    // if (player.getWorld() == worldManager.getWorld()) {
-    // challengeManager.openMenu(player);
-    // } else {
-    // player.message("You are not in Skylands!");
-    // }
-    // }
-    // }
+    @Command(aliases = { "challenge",
+            "c" }, parent = "sky", description = "Compete a Skylands Challenge", permissions = {
+                    "sky.command.challenge" }, toolTip = "/sky (c)hallenge")
+    public void challenge(final MessageReceiver caller, final String[] parameters) {
+        if (caller instanceof Player) {
+            final Player player = caller.asPlayer();
+            if (player.getWorld() == worldManager.getWorld()) {
+                challengeManager.openMenu(player);
+            } else {
+                player.message("You are not in Skylands!");
+            }
+        }
+    }
 
     @Command(aliases = { "exit",
             "e" }, parent = "sky", description = "Exit Skylands", permissions = {
@@ -228,8 +231,8 @@ public class SkylandsCommand implements CommandListener {
                 player.teleportTo(returnLocation);
 
                 xPlayer.setLocation(null);
-                // challengeManager.resetMenu(player);
-                // xPlayer.challengesCompleted.clear();
+                challengeManager.resetMenu(player);
+                xPlayer.challengesCompleted.clear();
                 xPlayer.update();
                 islandManager.clearIsland(worldManager.getWorld(), player, xPlayer.islandId);
 

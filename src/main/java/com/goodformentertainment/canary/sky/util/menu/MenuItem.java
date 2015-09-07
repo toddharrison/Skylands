@@ -1,4 +1,4 @@
-package com.goodformentertainment.canary.util.menu;
+package com.goodformentertainment.canary.sky.util.menu;
 
 import net.canarymod.Canary;
 import net.canarymod.api.factory.ItemFactory;
