@@ -6,7 +6,7 @@
     </tableProperties>
     <entry>
         <id>1</id>
-        <name>Survivalist</name>
+        <name>FirstNight</name>
         <order>1</order>
     </entry>
     <entry>
@@ -21,17 +21,17 @@
     </entry>
     <entry>
         <id>4</id>
-        <name>Builder</name>
+        <name>Developer</name>
         <order>4</order>
     </entry>
     <entry>
         <id>5</id>
-        <name>Conqueror</name>
+        <name>Explorer</name>
         <order>5</order>
     </entry>
     <entry>
         <id>6</id>
-        <name>Xtreme</name>
+        <name>SkyMaster</name>
         <order>6</order>
     </entry>
 </skylands_xchallengelevel>

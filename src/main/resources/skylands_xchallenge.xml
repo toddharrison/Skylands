@@ -23,30 +23,24 @@
         <type auto-increment="false" data-type="STRING" column-type="NORMAL" is-list="false" not-null="false"/>
     </tableProperties>
     <entry>
-        <consume_items>true</consume_items>
-        <description>Create a cobblestone generator and mine 32 cobblestone.</description>
+        <consume_items>false</consume_items>
+        <description>Claim your own SkyLands island.</description>
         <id>1</id>
-        <items_repeat_reward>
-            <list-element>minecraft:grass:1</list-element>
-        </items_repeat_reward>
-        <items_required>
-            <list-element>minecraft:cobblestone:32</list-element>
-        </items_required>
+        <items_repeat_reward/>
+        <items_required/>
         <items_reward>
-            <list-element>minecraft:cactus:1</list-element>
-            <list-element>minecraft:grass:5</list-element>
+            <list-element>minecraft:torch:1</list-element>
         </items_reward>
-        <level>Survivalist</level>
+        <level>FirstNight</level>
         <min_player_score>-1</min_player_score>
-        <name>CobbleGenerator</name>
-        <repeat_reward_description>1 grass block</repeat_reward_description>
-        <repeatable>true</repeatable>
-        <reward_description>1 cactus and 5 grass blocks</reward_description>
-        <score_repeat_reward>10</score_repeat_reward>
-        <score_reward>40</score_reward>
+        <name>FirstNight</name>
+        <repeat_reward_description/>
+        <repeatable>false</repeatable>
+        <reward_description>1 torch</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
-    <!--
     <entry>
         <consume_items>false</consume_items>
         <description>3 blocks of still water on your island.</description>
@@ -59,71 +53,20 @@
             <list-element>minecraft:reeds:1</list-element>
             <list-element>minecraft:lava_bucket:1</list-element>
         </items_reward>
-        <level>Survivalist</level>
+        <level>FirstNight</level>
         <min_player_score>-1</min_player_score>
         <name>Watersource</name>
         <repeat_reward_description>null</repeat_reward_description>
         <repeatable>false</repeatable>
         <reward_description>1 reed and 1 lava bucket</reward_description>
         <score_repeat_reward>0</score_repeat_reward>
-        <score_reward>40</score_reward>
+        <score_reward>0</score_reward>
         <type>onIsland</type>
-    </entry>
-    <entry>
-        <consume_items>true</consume_items>
-        <description>Collect 1 apple from an oak tree.</description>
-        <id>3</id>
-        <items_repeat_reward>
-            <list-element>minecraft:sapling:1:0</list-element>
-            <list-element>minecraft:sapling:1:1</list-element>
-            <list-element>minecraft:sapling:1:2</list-element>
-        </items_repeat_reward>
-        <items_required>
-            <list-element>minecraft:apple:1</list-element>
-        </items_required>
-        <items_reward>
-            <list-element>minecraft:sapling:2:0</list-element>
-            <list-element>minecraft:sapling:2:1</list-element>
-            <list-element>minecraft:sapling:2:2</list-element>
-        </items_reward>
-        <level>Survivalist</level>
-        <min_player_score>-1</min_player_score>
-        <name>FirstFruits</name>
-        <repeat_reward_description>1 each of spruce, birch, oak sapling</repeat_reward_description>
-        <repeatable>true</repeatable>
-        <reward_description>2 each of spruce, birch, oak saplings</reward_description>
-        <score_repeat_reward>10</score_repeat_reward>
-        <score_reward>40</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    <entry>
-        <consume_items>true</consume_items>
-        <description>Create a melon farm and harvest 32 slices of melon.</description>
-        <id>4</id>
-        <items_repeat_reward>
-            <list-element>minecraft:dirt:1:0</list-element>
-        </items_repeat_reward>
-        <items_required>
-            <list-element>minecraft:melon:32</list-element>
-        </items_required>
-        <items_reward>
-            <list-element>minecraft:pumpkin_seeds:1</list-element>
-            <list-element>minecraft:dirt:5:0</list-element>
-        </items_reward>
-        <level>Survivalist</level>
-        <min_player_score>-1</min_player_score>
-        <name>Provisions</name>
-        <repeat_reward_description>1 dirt block</repeat_reward_description>
-        <repeatable>true</repeatable>
-        <reward_description>1 pumpkin seed and 5 dirtblocks</reward_description>
-        <score_repeat_reward>10</score_repeat_reward>
-        <score_reward>40</score_reward>
-        <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>false</consume_items>
         <description>Build a house that contains at least 1 oak door, workbench, furnace, chest and torch.</description>
-        <id>5</id>
+        <id>3</id>
         <items_repeat_reward/>
         <items_required>
             <list-element>minecraft:wooden_door:1</list-element>
@@ -136,25 +79,148 @@
             <list-element>minecraft:brown_mushroom:1</list-element>
             <list-element>minecraft:red_mushroom:1</list-element>
         </items_reward>
-        <level>Survivalist</level>
+        <level>FirstNight</level>
         <min_player_score>-1</min_player_score>
         <name>Shelter</name>
         <repeat_reward_description>null</repeat_reward_description>
         <repeatable>false</repeatable>
         <reward_description>1 brown and 1 red mushroom</reward_description>
         <score_repeat_reward>0</score_repeat_reward>
-        <score_reward>40</score_reward>
+        <score_reward>0</score_reward>
         <type>onIsland</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Create a pumpkin farm and harvest 16 pumpkins.</description>
+        <description>Create a cobblestone generator and mine 64 cobblestone.</description>
+        <id>4</id>
+        <items_repeat_reward>
+            <list-element>minecraft:grass:1</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:cobblestone:64</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:cactus:1</list-element>
+            <list-element>minecraft:grass:5</list-element>
+        </items_reward>
+        <level>FirstNight</level>
+        <min_player_score>-1</min_player_score>
+        <name>CobbleGenerator</name>
+        <repeat_reward_description>1 grass block</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>1 cactus and 5 grass blocks</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Collect 2 apples from oak trees.</description>
+        <id>5</id>
+        <items_repeat_reward>
+            <list-element>minecraft:sapling:1:0</list-element>
+            <list-element>minecraft:sapling:1:1</list-element>
+            <list-element>minecraft:sapling:1:2</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:apple:2</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:sapling:2:0</list-element>
+            <list-element>minecraft:sapling:2:1</list-element>
+            <list-element>minecraft:sapling:2:2</list-element>
+        </items_reward>
+        <level>FirstNight</level>
+        <min_player_score>-1</min_player_score>
+        <name>FirstFruits</name>
+        <repeat_reward_description>1 each of spruce, birch, oak sapling</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>2 each of spruce, birch, oak saplings</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Create a melon farm and harvest 64 slices of melon.</description>
         <id>6</id>
+        <items_repeat_reward>
+            <list-element>minecraft:dirt:1:0</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:melon:64</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:pumpkin_seeds:1</list-element>
+            <list-element>minecraft:dirt:5:0</list-element>
+        </items_reward>
+        <level>FirstNight</level>
+        <min_player_score>-1</min_player_score>
+        <name>Provisions</name>
+        <repeat_reward_description>1 dirt block</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>1 pumpkin seed and 5 dirtblocks</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Create a tree farm and collect 32 oak, birch and spruce logs.</description>
+        <id>7</id>
+        <items_repeat_reward>
+            <list-element>minecraft:sapling:1:3</list-element>
+            <list-element>minecraft:sapling:1:5</list-element>
+            <list-element>minecraft:sapling:1:4</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:log:32:0</list-element>
+            <list-element>minecraft:log:32:1</list-element>
+            <list-element>minecraft:log:32:2</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:sapling:4:3</list-element>
+            <list-element>minecraft:sapling:4:5</list-element>
+            <list-element>minecraft:sapling:4:4</list-element>
+        </items_reward>
+        <level>FirstNight</level>
+        <min_player_score>-1</min_player_score>
+        <name>Lumberjack</name>
+        <repeat_reward_description>1 each of jungle, dark oak, acacia saplings</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>4 each of jungle, dark oak, acacia saplings</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>false</consume_items>
+        <description>You've survived the FirstNight.</description>
+        <id>8</id>
+        <items_repeat_reward/>
+        <items_required/>
+        <items_reward>
+            <list-element>minecraft:spawn_egg:2:93</list-element>
+        </items_reward>
+        <level>Gatherer</level>
+        <min_player_score>-1</min_player_score>
+        <name>Gatherer</name>
+        <repeat_reward_description/>
+        <repeatable>false</repeatable>
+        <reward_description>2 chicken spawn eggs</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Create a pumpkin farm and harvest 32 pumpkins.</description>
+        <id>9</id>
         <items_repeat_reward>
             <list-element>minecraft:sand:1:0</list-element>
         </items_repeat_reward>
         <items_required>
-            <list-element>minecraft:pumpkin:16</list-element>
+            <list-element>minecraft:pumpkin:32</list-element>
         </items_required>
         <items_reward>
             <list-element>minecraft:sand:5:0</list-element>
@@ -166,19 +232,19 @@
         <repeat_reward_description>1 sand block</repeat_reward_description>
         <repeatable>true</repeatable>
         <reward_description>5 sand blocks and 1 iron ore</reward_description>
-        <score_repeat_reward>20</score_repeat_reward>
-        <score_reward>80</score_reward>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Create a cactus farm and harvest 16 cacti.</description>
-        <id>7</id>
+        <description>Create a cactus farm and harvest 32 cacti.</description>
+        <id>10</id>
         <items_repeat_reward>
             <list-element>minecraft:iron_ore:1</list-element>
         </items_repeat_reward>
         <items_required>
-            <list-element>minecraft:cactus:16</list-element>
+            <list-element>minecraft:cactus:32</list-element>
         </items_required>
         <items_reward>
             <list-element>minecraft:iron_ore:5</list-element>
@@ -189,19 +255,19 @@
         <repeat_reward_description>1 iron ore</repeat_reward_description>
         <repeatable>true</repeatable>
         <reward_description>5 iron ore</reward_description>
-        <score_repeat_reward>20</score_repeat_reward>
-        <score_reward>80</score_reward>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Create a sugar cane farm and refine 32 units of sugar.</description>
-        <id>8</id>
+        <description>Create a sugar cane farm and refine 64 units of sugar.</description>
+        <id>11</id>
         <items_repeat_reward>
             <list-element>minecraft:mycelium:1</list-element>
         </items_repeat_reward>
         <items_required>
-            <list-element>minecraft:sugar:32</list-element>
+            <list-element>minecraft:sugar:64</list-element>
         </items_required>
         <items_reward>
             <list-element>minecraft:mycelium:5</list-element>
@@ -213,14 +279,14 @@
         <repeat_reward_description>1 mycelium block</repeat_reward_description>
         <repeatable>true</repeatable>
         <reward_description>5 myccelium blocks and 1 iron ore</reward_description>
-        <score_repeat_reward>20</score_repeat_reward>
-        <score_reward>80</score_reward>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
         <description>Create a mushroom farm and collect 16 red and 16 brown mushrooms.</description>
-        <id>9</id>
+        <id>12</id>
         <items_repeat_reward>
             <list-element>minecraft:sand:1:1</list-element>
         </items_repeat_reward>
@@ -238,43 +304,14 @@
         <repeat_reward_description>1 red sand block</repeat_reward_description>
         <repeatable>true</repeatable>
         <reward_description>5 red sand blocks and 1 iron ore</reward_description>
-        <score_repeat_reward>20</score_repeat_reward>
-        <score_reward>80</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    <entry>
-        <consume_items>true</consume_items>
-        <description>Create a tree farm and collect 16 oak, birch and spruce logs.</description>
-        <id>10</id>
-        <items_repeat_reward>
-            <list-element>minecraft:sapling:1:3</list-element>
-            <list-element>minecraft:sapling:1:5</list-element>
-            <list-element>minecraft:sapling:1:4</list-element>
-        </items_repeat_reward>
-        <items_required>
-            <list-element>minecraft:log:16:0</list-element>
-            <list-element>minecraft:log:16:1</list-element>
-            <list-element>minecraft:log:16:2</list-element>
-        </items_required>
-        <items_reward>
-            <list-element>minecraft:sapling:4:3</list-element>
-            <list-element>minecraft:sapling:4:5</list-element>
-            <list-element>minecraft:sapling:4:4</list-element>
-        </items_reward>
-        <level>Gatherer</level>
-        <min_player_score>-1</min_player_score>
-        <name>Lumberjack</name>
-        <repeat_reward_description>1 each of jungle, dark oak, acacia saplings</repeat_reward_description>
-        <repeatable>true</repeatable>
-        <reward_description>4 each of jungle, dark oak, acacia saplings</reward_description>
-        <score_repeat_reward>20</score_repeat_reward>
-        <score_reward>80</score_reward>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
         <description>Collect 16 eggs from wandering fowl.</description>
-        <id>11</id>
+        <id>13</id>
         <items_repeat_reward>
             <list-element>minecraft:redstone:1</list-element>
         </items_repeat_reward>
@@ -291,37 +328,81 @@
         <repeat_reward_description>1 redstone dust</repeat_reward_description>
         <repeatable>true</repeatable>
         <reward_description>2 cocoa beans and 1 redstone dust</reward_description>
-        <score_repeat_reward>20</score_repeat_reward>
-        <score_reward>80</score_reward>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Make a fishing pond, catch and cook 6 salmon and 12 fish.</description>
+        <id>14</id>
+        <items_repeat_reward>
+            <list-element>minecraft:spawn_egg:1:92</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:cooked_fished:6:1</list-element>
+            <list-element>minecraft:cooked_fished:12:0</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:spawn_egg:2:92</list-element>
+        </items_reward>
+        <level>Gatherer</level>
+        <min_player_score>-1</min_player_score>
+        <name>Fisherman</name>
+        <repeat_reward_description>1 cow spawn egg</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>2 cow spawn eggs</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>false</consume_items>
+        <description>Time to go hunting.</description>
+        <id>15</id>
+        <items_repeat_reward/>
+        <items_required/>
+        <items_reward>
+            <list-element>minecraft:flint:2</list-element>
+        </items_reward>
+        <level>Hunter</level>
+        <min_player_score>-1</min_player_score>
+        <name>Hunter</name>
+        <repeat_reward_description/>
+        <repeatable>false</repeatable>
+        <reward_description>2 flint</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
         <description>Collect 16 bones from slaying skeletons.</description>
-        <id>12</id>
+        <id>16</id>
         <items_repeat_reward>
-            <list-element>minecraft:iron_ore:1</list-element>
+            <list-element>minecraft:dye:9:1</list-element>
         </items_repeat_reward>
         <items_required>
             <list-element>minecraft:bone:16</list-element>
         </items_required>
         <items_reward>
-            <list-element>minecraft:iron_ore:5</list-element>
+            <list-element>minecraft:iron_ore:2</list-element>
+			<list-element>minecraft:dye:9:4</list-element>
         </items_reward>
         <level>Hunter</level>
         <min_player_score>-1</min_player_score>
         <name>DemBones</name>
-        <repeat_reward_description>1 iron ore</repeat_reward_description>
+        <repeat_reward_description>1 lapis lazuli</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>5 iron ore</reward_description>
-        <score_repeat_reward>30</score_repeat_reward>
-        <score_reward>160</score_reward>
+        <reward_description>2 iron ore and 9 lapis lazuli</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
         <description>Collect 2 spider eyes from slaying spiders.</description>
-        <id>13</id>
+        <id>17</id>
         <items_repeat_reward>
             <list-element>minecraft:snowball:1</list-element>
         </items_repeat_reward>
@@ -330,22 +411,22 @@
         </items_required>
         <items_reward>
             <list-element>minecraft:snowball:4</list-element>
-            <list-element>minecraft:iron_ore:1</list-element>
+            <list-element>minecraft:iron_ore:2</list-element>
         </items_reward>
         <level>Hunter</level>
         <min_player_score>-1</min_player_score>
         <name>Arachnophobia</name>
         <repeat_reward_description>1 snowball</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>4 snowballs and 1 iron ore</reward_description>
-        <score_repeat_reward>30</score_repeat_reward>
-        <score_reward>160</score_reward>
+        <reward_description>4 snowballs and 2 iron ore</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
         <description>Collect 16 rotten flesh from slaying zombies.</description>
-        <id>14</id>
+        <id>18</id>
         <items_repeat_reward>
             <list-element>minecraft:iron_ore:1</list-element>
         </items_repeat_reward>
@@ -361,117 +442,68 @@
         <repeat_reward_description>1 iron ore</repeat_reward_description>
         <repeatable>true</repeatable>
         <reward_description>5 iron ore</reward_description>
-        <score_repeat_reward>30</score_repeat_reward>
-        <score_reward>160</score_reward>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
         <description>Collect 8 gunpowder from slaying creepers.</description>
-        <id>15</id>
+        <id>19</id>
         <items_repeat_reward>
-            <list-element>minecraft:redstone:1</list-element>
+            <list-element>minecraft:prismarine_crystals:1</list-element>
         </items_repeat_reward>
         <items_required>
             <list-element>minecraft:gunpowder:8</list-element>
         </items_required>
         <items_reward>
-            <list-element>minecraft:redstone:4</list-element>
+            <list-element>minecraft:prismarine_shard:4</list-element>
+			<list-element>minecraft:prismarine_crystals:5</list-element>
+			<list-element>minecraft:iron_ore:2</list-element>
         </items_reward>
         <level>Hunter</level>
         <min_player_score>-1</min_player_score>
         <name>SSsss</name>
-        <repeat_reward_description>1 redstone dust</repeat_reward_description>
+        <repeat_reward_description>1 prismarine crystal</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>4 redstone dust</reward_description>
-        <score_repeat_reward>30</score_repeat_reward>
-        <score_reward>160</score_reward>
+        <reward_description>2 iron ore, 4 prismarine shards and 5 prismarine crystals</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Make a fishing pond, catch and cook 2 salmon and 4 fish.</description>
-        <id>16</id>
+        <description>Create and army of snow golems and turn in 32 snow blocks.</description>
+        <id>20</id>
         <items_repeat_reward>
-            <list-element>minecraft:netherrack:1</list-element>
+            <list-element>minecraft:ice:1</list-element>
+			<list-element>minecraft:packed_ice:1</list-element>
         </items_repeat_reward>
         <items_required>
-            <list-element>minecraft:cooked_fished:4:1</list-element>
-            <list-element>minecraft:cooked_fished:4:0</list-element>
+            <list-element>minecraft:snow_block:32</list-element>
         </items_required>
         <items_reward>
-            <list-element>minecraft:netherrack:5</list-element>
+            <list-element>minecraft:ice:5</list-element>
+			<list-element>minecraft:packed_ice:5</list-element>
+			<list-element>minecraft:iron_ore:2</list-element>
         </items_reward>
         <level>Hunter</level>
         <min_player_score>-1</min_player_score>
-        <name>Fisherman</name>
-        <repeat_reward_description>1 netherrack block</repeat_reward_description>
+        <name>Minions</name>
+        <repeat_reward_description>1 ice blocks and 1 packed ice blocks</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>5 netherrack blocks</reward_description>
-        <score_repeat_reward>30</score_repeat_reward>
-        <score_reward>160</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    <entry>
-        <consume_items>true</consume_items>
-        <description>Craft 8 hay bales from wheat farming.</description>
-        <id>17</id>
-        <items_repeat_reward>
-            <list-element>minecraft:gold_ore:1</list-element>
-        </items_repeat_reward>
-        <items_required>
-            <list-element>minecraft:hay_block:8</list-element>
-        </items_required>
-        <items_reward>
-            <list-element>minecraft:diamond:1</list-element>
-            <list-element>minecraft:gold_ore:5</list-element>
-        </items_reward>
-        <level>Builder</level>
-        <min_player_score>-1</min_player_score>
-        <name>Harvester</name>
-        <repeat_reward_description>1 gold ore</repeat_reward_description>
-        <repeatable>true</repeatable>
-        <reward_description>1 diamond and 5 gold ore</reward_description>
-        <score_repeat_reward>40</score_repeat_reward>
-        <score_reward>320</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    <entry>
-        <consume_items>true</consume_items>
-        <description>Collect 32 logs from each of the 6 types of trees.</description>
-        <id>18</id>
-        <items_repeat_reward>
-            <list-element>minecraft:gold_ore:1</list-element>
-        </items_repeat_reward>
-        <items_required>
-            <list-element>minecraft:log:32:0</list-element>
-            <list-element>minecraft:log:32:1</list-element>
-            <list-element>minecraft:log:32:2</list-element>
-            <list-element>minecraft:log:32:3</list-element>
-            <list-element>minecraft:log:32:4</list-element>
-            <list-element>minecraft:log:32:5</list-element>
-        </items_required>
-        <items_reward>
-            <list-element>minecraft:diamond:1</list-element>
-            <list-element>minecraft:gold_ore:5</list-element>
-        </items_reward>
-        <level>Builder</level>
-        <min_player_score>-1</min_player_score>
-        <name>Lumberyard</name>
-        <repeat_reward_description>1 gold ore</repeat_reward_description>
-        <repeatable>true</repeatable>
-        <reward_description>1 diamond and 5 gold ore</reward_description>
-        <score_repeat_reward>40</score_repeat_reward>
-        <score_reward>320</score_reward>
+        <reward_description>2 iron ore, 5 ice blocks and 5 packed ice blocks</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
         <description>Pull out your tools and craft 6 trapdoors, 6 levers, 6 stone buttons and 6 stone pressure plates.
         </description>
-        <id>19</id>
+        <id>21</id>
         <items_repeat_reward>
-            <list-element>minecraft:dye:1:4</list-element>
+            <list-element>minecraft:spawn_egg:1:101</list-element>
         </items_repeat_reward>
         <items_required>
             <list-element>minecraft:trapdoor:6</list-element>
@@ -480,25 +512,41 @@
             <list-element>minecraft:stone_pressure_plate:6</list-element>
         </items_required>
         <items_reward>
-            <list-element>minecraft:flint:2</list-element>
-            <list-element>minecraft:dye:9:4</list-element>
+            <list-element>minecraft:spawn_egg:2:101</list-element>
         </items_reward>
-        <level>Builder</level>
+        <level>Hunter</level>
         <min_player_score>-1</min_player_score>
-        <name>Engineer</name>
-        <repeat_reward_description>1 lapis lazuli</repeat_reward_description>
+        <name>Trapper</name>
+        <repeat_reward_description>1 rabbit spawn egg.</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>2 flint and 9 lapis lazuli</reward_description>
-        <score_repeat_reward>40</score_repeat_reward>
-        <score_reward>320</score_reward>
+        <reward_description>2 rabbit spawn eggs.</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>false</consume_items>
-        <description>Build a house that contains at least 1 bed, bookshelf, painting, jukebox and window (glass
-            block).
-        </description>
-        <id>20</id>
+        <description>Time to get a little more advanced.</description>
+        <id>22</id>
+        <items_repeat_reward/>
+        <items_required/>
+        <items_reward>
+            <list-element>minecraft:diamond_pickaxe</list-element>
+        </items_reward>
+        <level>Developer</level>
+        <min_player_score>-1</min_player_score>
+        <name>Developer</name>
+        <repeat_reward_description/>
+        <repeatable>false</repeatable>
+        <reward_description>diamond pickaxe</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>false</consume_items>
+        <description>Build a house that contains at least 1 bed, bookshelf, painting, jukebox and window (glass block).</description>
+        <id>23</id>
         <items_repeat_reward/>
         <items_required>
             <list-element>minecraft:bed:1</list-element>
@@ -510,24 +558,125 @@
         <items_reward>
             <list-element>minecraft:record_wait:1</list-element>
             <list-element>minecraft:diamond_ore:1</list-element>
-            <list-element>minecraft:spawn_egg:2:101</list-element>
+            <list-element>minecraft:obsidian:10</list-element>
         </items_reward>
-        <level>Builder</level>
+        <level>Developer</level>
         <min_player_score>-1</min_player_score>
         <name>HomeImprovements</name>
         <repeat_reward_description>null</repeat_reward_description>
         <repeatable>false</repeatable>
-        <reward_description>1 music disk, 1 diamond ore and 2 rabbit spawn eggs</reward_description>
+        <reward_description>1 music disk, 1 diamond ore and 10 obsidian blocks</reward_description>
         <score_repeat_reward>0</score_repeat_reward>
-        <score_reward>320</score_reward>
+        <score_reward>0</score_reward>
         <type>onIsland</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Whip together 1 cake, 5 pumpkin pies and 32 cookies.</description>
-        <id>21</id>
+        <description>Craft 4 hay bales from wheat farming.</description>
+        <id>24</id>
         <items_repeat_reward>
-            <list-element>minecraft:dye:1:4</list-element>
+            <list-element>minecraft:clay_ball:4</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:hay_block:8</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:clay_ball:16</list-element>
+            <list-element>minecraft:gold_ore:2</list-element>
+        </items_reward>
+        <level>Developer</level>
+        <min_player_score>-1</min_player_score>
+        <name>Harvester</name>
+        <repeat_reward_description>4 clay balls</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>2 gold ore and 16 clay balls</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Collect 64 potatoes.</description>
+        <id>25</id>
+        <items_repeat_reward>
+            <list-element>minecraft:prismarine_shard:8</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:potato:64</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:gold_ore:2</list-element>
+            <list-element>minecraft:prismarine_shard:32</list-element>
+        </items_reward>
+        <level>Developer</level>
+        <min_player_score>-1</min_player_score>
+        <name>Idaho</name>
+        <repeat_reward_description>8 prismarine shards</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>2 gold ore and 32 prismarine shards</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Collect 64 carrots.</description>
+        <id>26</id>
+        <items_repeat_reward>
+            <list-element>minecraft:gold_ore:1</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:carrot:64</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:gold_ore:5</list-element>
+            <list-element>minecraft:diamond:1</list-element>
+        </items_reward>
+        <level>Developer</level>
+        <min_player_score>-1</min_player_score>
+        <name>CarrotHead</name>
+        <repeat_reward_description>1 gold ore</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>5 gold ore and 1 diamond</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Collect 32 logs from each of the 6 types of trees.</description>
+        <id>27</id>
+        <items_repeat_reward>
+            <list-element>minecraft:end_stone:2</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:log:32:0</list-element>
+            <list-element>minecraft:log:32:1</list-element>
+            <list-element>minecraft:log:32:2</list-element>
+            <list-element>minecraft:log:32:3</list-element>
+            <list-element>minecraft:log2:32:0</list-element>
+            <list-element>minecraft:log2:32:1</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:end_stone:8</list-element>
+            <list-element>minecraft:gold_ore:2</list-element>
+        </items_reward>
+        <level>Developer</level>
+        <min_player_score>-1</min_player_score>
+        <name>Lumberyard</name>
+        <repeat_reward_description>2 end stone blocks</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>2 gold ore and 8 end stone blocks</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Whip together 1 cake, 5 pumpkin pies and 32 cookies.</description>
+        <id>28</id>
+        <items_repeat_reward>
+            <list-element>minecraft:spawn_egg:2:91</list-element>
         </items_repeat_reward>
         <items_required>
             <list-element>minecraft:cake:1</list-element>
@@ -536,24 +685,24 @@
         </items_required>
         <items_reward>
             <list-element>minecraft:diamond:1</list-element>
-            <list-element>minecraft:dye:9:4</list-element>
+            <list-element>minecraft:spawn_egg:2:91</list-element>
         </items_reward>
-        <level>Builder</level>
+        <level>Developer</level>
         <min_player_score>-1</min_player_score>
         <name>Bakery</name>
-        <repeat_reward_description>1 lapis lazuli</repeat_reward_description>
+        <repeat_reward_description>1 sheep spawn egg</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>1 diamond and 9 lapis lazuli</reward_description>
-        <score_repeat_reward>40</score_repeat_reward>
-        <score_reward>320</score_reward>
+        <reward_description>1 diamond and 2 sheep spawn eggs</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
         <description>Carefully craft 1 tnt, 16 firework rockets, 1 dispenser and 1 wooden button.</description>
-        <id>22</id>
+        <id>29</id>
         <items_repeat_reward>
-            <list-element>minecraft:blaze_rod:1</list-element>
+            <list-element>minecraft:sponge:1</list-element>
         </items_repeat_reward>
         <items_required>
             <list-element>minecraft:tnt:1</list-element>
@@ -562,71 +711,119 @@
             <list-element>minecraft:wooden_button:1</list-element>
         </items_required>
         <items_reward>
+			<list-element>minecraft:diamond:1</list-element>
             <list-element>minecraft:skull:6:4</list-element>
-            <list-element>minecraft:blaze_rod:1</list-element>
+            <list-element>minecraft:sponge:4</list-element>
         </items_reward>
-        <level>Conqueror</level>
+        <level>Developer</level>
         <min_player_score>-1</min_player_score>
         <name>Pyromaniac</name>
-        <repeat_reward_description>1 blaze rod</repeat_reward_description>
+        <repeat_reward_description>1 sponge block</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>6 creeper heads and 1 blaze rod</reward_description>
-        <score_repeat_reward>50</score_repeat_reward>
-        <score_reward>640</score_reward>
+        <reward_description>1 diamond, 6 creeper heads and 4 sponge blocks</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
+        <consume_items>false</consume_items>
+        <description>There's a big world out there.</description>
+        <id>30</id>
+        <items_repeat_reward/>
+        <items_required/>
+        <items_reward>
+            <list-element>minecraft:enchanted_book</list-element>
+        </items_reward>
+        <level>Explorer</level>
+        <min_player_score>-1</min_player_score>
+        <name>Explorer</name>
+        <repeat_reward_description/>
+        <repeatable>false</repeatable>
+        <reward_description>Enchanted book of Looting III</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>false</consume_items>
+        <description>Build and ignite a nether portal.</description>
+        <id>31</id>
+        <items_repeat_reward/>
+        <items_required>
+            <list-element>minecraft:portal:1</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:nether_wart:2</list-element>
+        </items_reward>
+        <level>Explorer</level>
+        <min_player_score>-1</min_player_score>
+        <name>NetherPortal</name>
+        <repeat_reward_description>null</repeat_reward_description>
+        <repeatable>false</repeatable>
+        <reward_description>2 netherwarts</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onIsland</type>
+    </entry>
+    <entry>
         <consume_items>true</consume_items>
-        <description>Collect 2 enderpearls from endermen.</description>
-        <id>23</id>
+        <description>Collect from the Nether: 64 netherrack, 32 soul sand, 16 gravel, 8 nether quartz and 4 glowstone.</description>
+        <id>32</id>
         <items_repeat_reward>
-            <list-element>minecraft:diamond:1</list-element>
+            <list-element>minecraft:blaze_rod:1</list-element>
         </items_repeat_reward>
         <items_required>
-            <list-element>minecraft:ender_pearl:2</list-element>
+            <list-element>minecraft:netherrack:64</list-element>
+			<list-element>minecraft:soul_sand:32</list-element>
+			<list-element>minecraft:gravel:16</list-element>
+			<list-element>minecraft:glowstone:4</list-element>
+			<list-element>minecraft:quartz:8</list-element>
         </items_required>
         <items_reward>
             <list-element>minecraft:diamond_ore:2</list-element>
+			<list-element>minecraft:blaze_rod:1</list-element>
         </items_reward>
-        <level>Conqueror</level>
+        <level>Explorer</level>
         <min_player_score>-1</min_player_score>
-        <name>PearlCollector</name>
-        <repeat_reward_description>1 diamond</repeat_reward_description>
+        <name>NetherExplorer</name>
+        <repeat_reward_description>1 blaze rod</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>2 diamond ore</reward_description>
-        <score_repeat_reward>50</score_repeat_reward>
-        <score_reward>640</score_reward>
+        <reward_description>2 diamond ore and 1 blaze rod</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Catch 2 clownfish and 4 pufferfish.</description>
-        <id>24</id>
+        <description>Assemble a boat and the following navigational tools: map(empty), compass and watch.
+		</description>
+        <id>33</id>
         <items_repeat_reward>
-            <list-element>minecraft:quartz_ore:1</list-element>
+            <list-element>minecraft:spawn_egg:1:90</list-element>
         </items_repeat_reward>
         <items_required>
-            <list-element>minecraft:fish:2:2</list-element>
-            <list-element>minecraft:fish:4:3</list-element>
+            <list-element>minecraft:boat:1</list-element>
+			<list-element>minecraft:map:1</list-element>
+			<list-element>minecraft:compass:1</list-element>
+			<list-element>minecraft:clock:1</list-element>
         </items_required>
         <items_reward>
-            <list-element>minecraft:quartz_ore:5</list-element>
-            <list-element>minecraft:diamond_ore:1</list-element>
+            <list-element>minecraft:spawn_egg:2:90</list-element>
         </items_reward>
-        <level>Conqueror</level>
+        <level>Explorer</level>
         <min_player_score>-1</min_player_score>
-        <name>BassMaster</name>
-        <repeat_reward_description>1 quartz ore</repeat_reward_description>
+        <name>Cartographer</name>
+        <repeat_reward_description>1 pig spawn egg</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>5 quartz ore and 1 diamond ore</reward_description>
-        <score_repeat_reward>50</score_repeat_reward>
-        <score_reward>640</score_reward>
+        <reward_description>2 pig spawn eggs</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
         <description>Collect 40 slime balls from slimes.</description>
-        <id>25</id>
+        <id>34</id>
         <items_repeat_reward>
             <list-element>minecraft:diamond:1</list-element>
         </items_repeat_reward>
@@ -636,30 +833,166 @@
         <items_reward>
             <list-element>minecraft:diamond_ore:2</list-element>
         </items_reward>
-        <level>Conqueror</level>
+        <level>Explorer</level>
         <min_player_score>-1</min_player_score>
         <name>Slimer</name>
         <repeat_reward_description>1 diamond</repeat_reward_description>
         <repeatable>true</repeatable>
         <reward_description>2 diamond ore</reward_description>
-        <score_repeat_reward>50</score_repeat_reward>
-        <score_reward>640</score_reward>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Collect and turn in 32 dandelions, 12 poppies, 64 vines, 64 tall grass and 32 each of the 6 types
-            of leaves.
-        </description>
-        <id>26</id>
+        <description>Collect 8 enderpearls from endermen.</description>
+        <id>35</id>
         <items_repeat_reward>
             <list-element>minecraft:emerald_ore:1</list-element>
         </items_repeat_reward>
         <items_required>
+            <list-element>minecraft:ender_pearl:4</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:emerald_ore:3</list-element>
+        </items_reward>
+        <level>Explorer</level>
+        <min_player_score>-1</min_player_score>
+        <name>PearlDiver</name>
+        <repeat_reward_description>1 emerald ore</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>3 emerald ore</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Catch 1 clownfish and 10 pufferfish.</description>
+        <id>36</id>
+        <items_repeat_reward>
+            <list-element>minecraft:emerald_ore:1</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:fish:1:2</list-element>
+            <list-element>minecraft:fish:10:3</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:emerald_ore:3</list-element>
+        </items_reward>
+        <level>Explorer</level>
+        <min_player_score>-1</min_player_score>
+        <name>BassMaster</name>
+        <repeat_reward_description>1 emerald ore</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>3 emerald ore</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Collect 32 saplings from each of the 6 tree types.</description>
+        <id>37</id>
+        <items_repeat_reward>
+            <list-element>minecraft:diamond_ore:1</list-element>
+        </items_repeat_reward>
+        <items_required>
+            <list-element>minecraft:sapling:32:0</list-element>
+            <list-element>minecraft:sapling:32:1</list-element>
+            <list-element>minecraft:sapling:32:2</list-element>
+            <list-element>minecraft:sapling:32:3</list-element>
+            <list-element>minecraft:sapling:32:4</list-element>
+            <list-element>minecraft:sapling:32:5</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:diamond_ore:3</list-element>
+        </items_reward>
+        <level>Explorer</level>
+        <min_player_score>-1</min_player_score>
+        <name>JohnnyAppleseed</name>
+        <repeat_reward_description>1 diamond ore</repeat_reward_description>
+        <repeatable>true</repeatable>
+        <reward_description>3 diamond ore</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>false</consume_items>
+        <description>Going above and beyond.</description>
+        <id>38</id>
+        <items_repeat_reward/>
+        <items_required/>
+        <items_reward>
+            <list-element>minecraft:enchanted_book</list-element>
+        </items_reward>
+        <level>SkyMaster</level>
+        <min_player_score>-1</min_player_score>
+        <name>SkyMaster</name>
+        <repeat_reward_description/>
+        <repeatable>false</repeatable>
+        <reward_description>Enchanted book of Looting III</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
+    </entry>
+    <entry>
+        <consume_items>false</consume_items>
+        <description>Craft and place one beacon on your island.</description>
+        <id>39</id>
+        <items_repeat_reward/>
+        <items_required>
+            <list-element>minecraft:beacon:1</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:diamond_block:9</list-element>
+        </items_reward>
+        <level>SkyMaster</level>
+        <min_player_score>-1</min_player_score>
+        <name>Defender</name>
+        <repeat_reward_description>null</repeat_reward_description>
+        <repeatable>false</repeatable>
+        <reward_description>9 diamond blocks</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onIsland</type>
+    </entry>
+    <entry>
+        <consume_items>false</consume_items>
+        <description>Place an enchanting table and 15 bookshelf on your island.</description>
+        <id>40</id>
+        <items_repeat_reward/>
+        <items_required>
+            <list-element>minecraft:enchanting_table:1</list-element>
+            <list-element>minecraft:bookshelf:15</list-element>
+        </items_required>
+        <items_reward>
+            <list-element>minecraft:enchanted_book</list-element>
+            <list-element>minecraft:emerald_ore:1</list-element>
+        </items_reward>
+        <level>SkyMaster</level>
+        <min_player_score>-1</min_player_score>
+        <name>Librarian</name>
+        <repeat_reward_description>null</repeat_reward_description>
+        <repeatable>false</repeatable>
+        <reward_description>Enchanted book of Silk Touch I and 1 emerald ore block</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
+        <type>onIsland</type>
+    </entry>
+    <entry>
+        <consume_items>true</consume_items>
+        <description>Collect and turn in 32 grass, 32 dandelions, 12 poppies, 32 vines, 32 each of the 6 types of leaves.</description>
+        <id>41</id>
+        <items_repeat_reward>
+            <list-element>minecraft:spawn_egg:2:98</list-element>
+        </items_repeat_reward>
+        <items_required>
             <list-element>minecraft:yellow_flower:32</list-element>
             <list-element>minecraft:red_flower:12:0</list-element>
-            <list-element>minecraft:vine:64</list-element>
-            <list-element>minecraft:tallgrass:64:1</list-element>
+            <list-element>minecraft:vine:32</list-element>
+            <list-element>minecraft:tallgrass:32:1</list-element>
             <list-element>minecraft:leaves:32:0</list-element>
             <list-element>minecraft:leaves:32:1</list-element>
             <list-element>minecraft:leaves:32:2</list-element>
@@ -669,30 +1002,28 @@
         </items_required>
         <items_reward>
             <list-element>minecraft:emerald_ore:1</list-element>
-            <list-element>minecraft:spawn_egg:2:96</list-element>
+            <list-element>minecraft:spawn_egg:2:98</list-element>
         </items_reward>
-        <level>Xtreme</level>
+        <level>SkyMaster</level>
         <min_player_score>-1</min_player_score>
         <name>Gardener</name>
-        <repeat_reward_description>1 emerald ore</repeat_reward_description>
+        <repeat_reward_description>1 ocelot spawn egg</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>2 mooshroom spawn eggs and 1 emerald ore</reward_description>
-        <score_repeat_reward>60</score_repeat_reward>
-        <score_reward>1280</score_reward>
+        <reward_description>2 ocelot spawn eggs and 1 emerald ore</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Breed and collect 64 raw porkchop, 64 wool block(white), 64 feathers, 16 leather and 16 rabbit
-            hides.
-        </description>
-        <id>27</id>
+        <description>Breed and collect 64 raw porkchop, 64 raw mutton, 64 feathers, 16 leather and 16 rabbit hides.</description>
+        <id>42</id>
         <items_repeat_reward>
-            <list-element>minecraft:emerald_ore:1</list-element>
+            <list-element>minecraft:spawn_egg:1:95</list-element>
         </items_repeat_reward>
         <items_required>
             <list-element>minecraft:porkchop:64</list-element>
-            <list-element>minecraft:wool:64:0</list-element>
+            <list-element>minecraft:mutton:64</list-element>
             <list-element>minecraft:feather:64</list-element>
             <list-element>minecraft:leather:16</list-element>
             <list-element>minecraft:rabbit_hide:16</list-element>
@@ -701,47 +1032,23 @@
             <list-element>minecraft:spawn_egg:2:95</list-element>
             <list-element>minecraft:emerald_ore:1</list-element>
         </items_reward>
-        <level>Xtreme</level>
+        <level>SkyMaster</level>
         <min_player_score>-1</min_player_score>
         <name>Rancher</name>
-        <repeat_reward_description>1 emerald ore</repeat_reward_description>
+        <repeat_reward_description>1 wolf spawn egg</repeat_reward_description>
         <repeatable>true</repeatable>
         <reward_description>2 wolf spawn eggs and 1 emerald ore</reward_description>
-        <score_repeat_reward>60</score_repeat_reward>
-        <score_reward>1280</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    <entry>
-        <consume_items>false</consume_items>
-        <description>Place an enchanting table and 15 bookshelf on your island.</description>
-        <id>28</id>
-        <items_repeat_reward/>
-        <items_required>
-            <list-element>minecraft:enchanting_table:1</list-element>
-            <list-element>minecraft:bookshelf:15</list-element>
-        </items_required>
-        <items_reward>
-            <list-element>minecraft:saddle:2</list-element>
-            <list-element>minecraft:diamond_horse_armor:2</list-element>
-            <list-element>minecraft:emerald_ore:1</list-element>
-        </items_reward>
-        <level>Xtreme</level>
-        <min_player_score>-1</min_player_score>
-        <name>Librarian</name>
-        <repeat_reward_description>null</repeat_reward_description>
-        <repeatable>false</repeatable>
-        <reward_description>2 saddles, 2 diamond horse armors and 1 emerald ore block</reward_description>
         <score_repeat_reward>0</score_repeat_reward>
-        <score_reward>1280</score_reward>
-        <type>onIsland</type>
+        <score_reward>0</score_reward>
+        <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
         <description>Collect 1 of every kind of cooked or crafted edible food (nothing raw, zombie flesh, or golden).
         </description>
-        <id>29</id>
+        <id>43</id>
         <items_repeat_reward>
-            <list-element>minecraft:emerald_ore:1</list-element>
+            <list-element>minecraft:spawn_egg:1:96</list-element>
         </items_repeat_reward>
         <items_required>
             <list-element>minecraft:mushroom_stew:1</list-element>
@@ -762,23 +1069,23 @@
             <list-element>minecraft:cooked_mutton:1</list-element>
         </items_required>
         <items_reward>
-            <list-element>minecraft:spawn_egg:2:100</list-element>
+            <list-element>minecraft:spawn_egg:2:96</list-element>
             <list-element>minecraft:emerald_ore:1</list-element>
         </items_reward>
-        <level>Xtreme</level>
+        <level>SkyMaster</level>
         <min_player_score>-1</min_player_score>
         <name>Ironchef</name>
-        <repeat_reward_description>1 emerald ore</repeat_reward_description>
+        <repeat_reward_description>1 mooshroom spawn egg</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>2 horse spawn eggs and 1 emerald ore</reward_description>
-        <score_repeat_reward>60</score_repeat_reward>
-        <score_reward>1280</score_reward>
+        <reward_description>2 mooshroom spawn eggs and 1 emerald ore</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Dye or shear 5 of every color of wool.</description>
-        <id>30</id>
+        <description>Dye or shear 5 of each wool color.</description>
+        <id>44</id>
         <items_repeat_reward>
             <list-element>minecraft:name_tag:1</list-element>
         </items_repeat_reward>
@@ -804,232 +1111,82 @@
             <list-element>minecraft:name_tag:2</list-element>
             <list-element>minecraft:emerald_ore:1</list-element>
         </items_reward>
-        <level>Xtreme</level>
+        <level>SkyMaster</level>
         <min_player_score>-1</min_player_score>
-        <name>Woolly</name>
+        <name>Quilter</name>
         <repeat_reward_description>1 name tag</repeat_reward_description>
         <repeatable>true</repeatable>
         <reward_description>2 name tags and 1 emerald ore</reward_description>
-        <score_repeat_reward>60</score_repeat_reward>
-        <score_reward>1280</score_reward>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Collect 32 saplings from each of the 6 tree types.</description>
-        <id>31</id>
+        <description>Collect 1 each of the 12 music disks.</description>
+        <id>45</id>
         <items_repeat_reward>
-            <list-element>minecraft:emerald_ore:1</list-element>
+            <list-element>minecraft:saddle:1</list-element>
+            <list-element>minecraft:spawn_egg:1:100</list-element>
         </items_repeat_reward>
         <items_required>
-            <list-element>minecraft:sapling:32:0</list-element>
-            <list-element>minecraft:sapling:32:1</list-element>
-            <list-element>minecraft:sapling:32:2</list-element>
-            <list-element>minecraft:sapling:32:3</list-element>
-            <list-element>minecraft:sapling:32:4</list-element>
-            <list-element>minecraft:sapling:32:5</list-element>
+            <list-element>minecraft:record_13:1</list-element>
+            <list-element>minecraft:record_cat:1</list-element>
+            <list-element>minecraft:record_blocks:1</list-element>
+            <list-element>minecraft:record_chirp:1</list-element>
+            <list-element>minecraft:record_far:1</list-element>
+            <list-element>minecraft:record_mall:1</list-element>
+            <list-element>minecraft:record_mellohi:1</list-element>
+            <list-element>minecraft:record_stal:1</list-element>
+            <list-element>minecraft:record_strad:1</list-element>
+            <list-element>minecraft:record_ward:1</list-element>
+            <list-element>minecraft:record_11:1</list-element>
+            <list-element>minecraft:record_wait:1</list-element>
         </items_required>
         <items_reward>
-            <list-element>minecraft:spawn_egg:2:98</list-element>
-            <list-element>minecraft:emerald_ore:1</list-element>
+            <list-element>minecraft:saddle:2</list-element>
+            <list-element>minecraft:spawn_egg:2:100</list-element>
         </items_reward>
-        <level>Xtreme</level>
+        <level>SkyMaster</level>
         <min_player_score>-1</min_player_score>
-        <name>JohnnyAppleseed</name>
-        <repeat_reward_description>1 emerald ore</repeat_reward_description>
+        <name>Maestro</name>
+        <repeat_reward_description>1 horse spawn egg and 1 saddle</repeat_reward_description>
         <repeatable>true</repeatable>
-        <reward_description>2 ocelot spawn eggs and 1 emerald ore</reward_description>
-        <score_repeat_reward>60</score_repeat_reward>
-        <score_reward>1280</score_reward>
+        <reward_description>2 horse spawn eggs and 2 saddles</reward_description>
+        <score_repeat_reward>0</score_repeat_reward>
+        <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
     <entry>
         <consume_items>true</consume_items>
-        <description>Collect 64 carrots and 64 potatoes.</description>
-        <id>32</id>
+        <description>Somehow procure: 1 golden apple, 6 poisonous potatoes, 1 lily pad, 1 chainmail boots, 1 rabbit foot, 1 eye of ender, 1 invisibility potion(3:00), 1 block of coal and 640 ink sacs.</description>
+        <id>46</id>
         <items_repeat_reward>
-            <list-element>minecraft:gold_ore:1</list-element>
-        </items_repeat_reward>
-        <items_required>
-            <list-element>minecraft:carrot:64</list-element>
-            <list-element>minecraft:potato:64</list-element>
-        </items_required>
-        <items_reward>
-            <list-element>minecraft:gold_ore:5</list-element>
-            <list-element>minecraft:diamond:1</list-element>
-        </items_reward>
-        <level>Builder</level>
-        <min_player_score>-1</min_player_score>
-        <name>CorprateFarming</name>
-        <repeat_reward_description>1 gold ore</repeat_reward_description>
-        <repeatable>true</repeatable>
-        <reward_description>5 gold ore and 1 diamond</reward_description>
-        <score_repeat_reward>40</score_repeat_reward>
-        <score_reward>320</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    <entry>
-        <consume_items>true</consume_items>
-        <description>Somehow procure: 1 golden apple, 1 watch, 6 poisonous potatoes, 1 glowstone block, 1 lily pad, 1
-            blank map, 1 chainmail boots, 1 rabbit foot, 1 eye of ender and 640 ink sacs types.
-        </description>
-        <id>33</id>
-        <items_repeat_reward>
-            <list-element>minecraft:emerald_ore:1</list-element>
+            <list-element>minecraft:spawn_egg:2:120</list-element>
         </items_repeat_reward>
         <items_required>
             <list-element>minecraft:golden_apple:1</list-element>
-            <list-element>minecraft:clock:1</list-element>
             <list-element>minecraft:poisonous_potato:6</list-element>
-            <list-element>minecraft:glowstone:1</list-element>
+            <list-element>minecraft:coal_block:1</list-element>
             <list-element>minecraft:waterlily:1</list-element>
-            <list-element>minecraft:map:1</list-element>
+            <list-element>minecraft:potion:1:8206</list-element>
             <list-element>minecraft:chainmail_boots:1</list-element>
             <list-element>minecraft:rabbit_foot:1</list-element>
             <list-element>minecraft:ender_eye:1</list-element>
-            <list-element>minecraft:dye:1:0</list-element>
+            <list-element>minecraft:dye:640:0</list-element>
         </items_required>
         <items_reward>
             <list-element>minecraft:spawn_egg:2:120</list-element>
             <list-element>minecraft:emerald_ore:1</list-element>
         </items_reward>
-        <level>Xtreme</level>
+        <level>SkyMaster</level>
         <min_player_score>-1</min_player_score>
         <name>Oddities</name>
-        <repeat_reward_description>1 emerald ore</repeat_reward_description>
+        <repeat_reward_description>1 villager spawn egg</repeat_reward_description>
         <repeatable>true</repeatable>
         <reward_description>2 villager spawn eggs and 1 emerald ore</reward_description>
-        <score_repeat_reward>60</score_repeat_reward>
-        <score_reward>1280</score_reward>
-        <type>onPlayer</type>
-    </entry>
-
-
-    <entry>
-        <consume_items>false</consume_items>
-        <description>Reach a score of 5000.</description>
-        <id>100</id>
-        <items_repeat_reward/>
-        <items_required/>
-        <items_reward>
-            <list-element>minecraft:spawn_egg:2:93</list-element>
-            <list-element>minecraft:iron_pickaxe:1</list-element>
-            <list-element>minecraft:iron_sword:1</list-element>
-            <list-element>minecraft:bow:1</list-element>
-        </items_reward>
-        <level>Survivalist</level>
-        <min_player_score>5000</min_player_score>
-        <name>Survivor</name>
-        <repeat_reward_description/>
-        <repeatable>false</repeatable>
-        <reward_description>2 chicken spawn eggs, 1 iron pick-axe, 1 iron sword and 1 bow</reward_description>
         <score_repeat_reward>0</score_repeat_reward>
         <score_reward>0</score_reward>
         <type>onPlayer</type>
     </entry>
-    <entry>
-        <consume_items>false</consume_items>
-        <description>Reach a score of 10000.</description>
-        <id>101</id>
-        <items_repeat_reward/>
-        <items_required/>
-        <items_reward>
-            <list-element>minecraft:spawn_egg:2:92</list-element>
-            <list-element>minecraft:iron_helmet:1</list-element>
-            <list-element>minecraft:iron_chestplate:1</list-element>
-            <list-element>minecraft:iron_leggings:1</list-element>
-            <list-element>minecraft:iron_boots:1</list-element>
-        </items_reward>
-        <level>Gatherer</level>
-        <min_player_score>10000</min_player_score>
-        <name>Gatherer</name>
-        <repeat_reward_description/>
-        <repeatable>false</repeatable>
-        <reward_description>2 cow spawn eggs and full iron armor</reward_description>
-        <score_repeat_reward>0</score_repeat_reward>
-        <score_reward>0</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    <entry>
-        <consume_items>false</consume_items>
-        <description>Reach a score of 20000.</description>
-        <id>102</id>
-        <items_repeat_reward/>
-        <items_required/>
-        <items_reward>
-            <list-element>minecraft:spawn_egg:2:91</list-element>
-            <list-element>minecraft:diamond_sword:1</list-element>
-        </items_reward>
-        <level>Hunter</level>
-        <min_player_score>20000</min_player_score>
-        <name>Hunter</name>
-        <repeat_reward_description/>
-        <repeatable>false</repeatable>
-        <reward_description>2 sheep spawn eggs and 1 diamond sword</reward_description>
-        <score_repeat_reward>0</score_repeat_reward>
-        <score_reward>0</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    <entry>
-        <consume_items>false</consume_items>
-        <description>Reach a score of 40000.</description>
-        <id>103</id>
-        <items_repeat_reward/>
-        <items_required/>
-        <items_reward>
-            <list-element>minecraft:spawn_egg:2:90</list-element>
-            <list-element>minecraft:obsidian:8</list-element>
-            <list-element>minecraft:diamond_pickaxe:1</list-element>
-        </items_reward>
-        <level>Builder</level>
-        <min_player_score>40000</min_player_score>
-        <name>Architect</name>
-        <repeat_reward_description/>
-        <repeatable>false</repeatable>
-        <reward_description>2 pig spawn eggs, 8 obsidian and 1 diamond pick-axe</reward_description>
-        <score_repeat_reward>0</score_repeat_reward>
-        <score_reward>0</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    <entry>
-        <consume_items>false</consume_items>
-        <description>Reach a score of 80000.</description>
-        <id>104</id>
-        <items_repeat_reward/>
-        <items_required/>
-        <items_reward>
-            <list-element>minecraft:nether_wart:2</list-element>
-            <list-element>minecraft:diamond_ore:5</list-element>
-            <list-element>minecraft:soul_sand:5</list-element>
-        </items_reward>
-        <level>Conqueror</level>
-        <min_player_score>80000</min_player_score>
-        <name>Conqueror</name>
-        <repeat_reward_description/>
-        <repeatable>false</repeatable>
-        <reward_description>2 netherwart, 5 soul sand and 5 gold ore</reward_description>
-        <score_repeat_reward>0</score_repeat_reward>
-        <score_reward>0</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    <entry>
-        <consume_items>false</consume_items>
-        <description>Reach a score of 160000.</description>
-        <id>105</id>
-        <items_repeat_reward/>
-        <items_required/>
-        <items_reward>
-            <list-element>minecraft:beacon:1</list-element>
-        </items_reward>
-        <level>Xtreme</level>
-        <min_player_score>160000</min_player_score>
-        <name>Xtreme Overlord</name>
-        <repeat_reward_description/>
-        <repeatable>false</repeatable>
-        <reward_description>1 beacon</reward_description>
-        <score_repeat_reward>0</score_repeat_reward>
-        <score_reward>0</score_reward>
-        <type>onPlayer</type>
-    </entry>
-    -->
 </skylands_xchallenge>

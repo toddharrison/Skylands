@@ -89,8 +89,8 @@ public class SkylandsCommand implements CommandListener {
         }
     }
 
-    @Command(aliases = { "exit",
-            "e" }, parent = "sky", description = "Exit Skylands", permissions = {
+    @Command(aliases = { "exit", "e",
+            "x" }, parent = "sky", description = "Exit Skylands", permissions = {
                     "sky.command.exit" }, toolTip = "/sky (e)xit")
     public void exit(final MessageReceiver caller, final String[] parameters)
             throws DatabaseReadException, DatabaseWriteException {
@@ -200,14 +200,14 @@ public class SkylandsCommand implements CommandListener {
     // }
     // }
 
-    @Command(aliases = {
-            "restart" }, parent = "sky", description = "Restart your island", permissions = {
+    @Command(aliases = { "restart",
+            "reset" }, parent = "sky", description = "Restart your island", permissions = {
                     "sky.command.restart" }, toolTip = "/sky restart")
     public void restart(final MessageReceiver caller, final String[] parameters)
             throws DatabaseWriteException, DatabaseReadException {
         if (caller instanceof Player) {
             final Player player = caller.asPlayer();
-            if (player.getWorld() == worldManager.getWorld()) {
+            if (player.getWorld() != worldManager.getWorld()) {
                 // final SkylandsPlayer xPlayer = playerManager.getXPlayer(player);
                 // if (xPlayer.practice) {
                 // xPlayer.practice = false;
@@ -224,20 +224,20 @@ public class SkylandsCommand implements CommandListener {
                 // player.kill();
 
                 final SkylandsPlayer xPlayer = SkylandsPlayer.getXPlayer(player);
-                Location returnLocation = xPlayer.getReturnLocation();
-                if (returnLocation == null) {
-                    returnLocation = worldManager.getDefaultSpawn();
-                }
-                player.teleportTo(returnLocation);
+                // Location returnLocation = xPlayer.getReturnLocation();
+                // if (returnLocation == null) {
+                // returnLocation = worldManager.getDefaultSpawn();
+                // }
+                // player.teleportTo(returnLocation);
 
                 xPlayer.setLocation(null);
                 challengeManager.resetMenu(player);
                 xPlayer.challengesCompleted.clear();
                 xPlayer.update();
-                islandManager.clearIsland(worldManager.getWorld(), player, xPlayer.islandId);
+                islandManager.clearIsland(worldManager.getWorld(), player, xPlayer.islandId + 1);
 
             } else {
-                player.message("You are not in Skylands!");
+                player.message("You are currently in Skylands!");
             }
         }
     }

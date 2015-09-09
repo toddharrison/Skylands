@@ -105,7 +105,7 @@ public class SkylandsChallengeManager implements PluginListener {
         if (xChallenge != null) {
             final Map<ItemType, Integer> requiredItems = xChallenge.getItemsRequired();
             final Inventory inv = player.getInventory();
-            final int minPlayerScore = xChallenge.minPlayerScore;
+            // final int minPlayerScore = xChallenge.minPlayerScore;
 
             if ("onPlayer".equals(xChallenge.type)) {
                 final SkylandsPlayer xPlayer = playerManager.getXPlayer(player);
