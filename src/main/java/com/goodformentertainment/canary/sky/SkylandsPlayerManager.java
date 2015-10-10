@@ -121,7 +121,8 @@ public class SkylandsPlayerManager implements PluginListener {
 
                 playerZown = zownManager.createZown(world, name, null, minPoint, maxPoint);
                 final IConfiguration playerZownConfig = playerZown.getData().getConfiguration();
-                playerZownConfig.addCommandRestriction("/spawn");
+                // playerZownConfig.addCommandRestriction("/spawn");
+                playerZownConfig.addCommandRestriction("/kit");
                 // playerZownConfig.addCommandRestriction("/sethome");
                 // playerZownConfig.addCommandRestriction("/home");
                 // playerZownConfig.setFlag(Flag.playerexit.name(), false);
@@ -235,7 +236,7 @@ public class SkylandsPlayerManager implements PluginListener {
             throws DatabaseReadException, DatabaseWriteException {
         if (hook.getWorld() == worldManager.getWorld()) {
             final Player player = hook.getPlayer();
-            final SkylandsPlayer xPlayer = removePlayer(player);
+            final SkylandsPlayer xPlayer = getXPlayer(player);
 
             // if (!deadPlayers.remove(player.getUUIDString())) {
             final Location fromLocation;
@@ -249,6 +250,8 @@ public class SkylandsPlayerManager implements PluginListener {
                 persist(xPlayer);
             }
             // }
+
+            removePlayer(player);
 
             // Disable player flight
             player.getCapabilities().setMayFly(false);
